@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function UserInput({ userInput, handleChange }) {
   return (
     <section id="user-input">
@@ -32,8 +30,10 @@ export default function UserInput({ userInput, handleChange }) {
           <label>Return</label>
           <input
             type="number"
-            value={userInput.return}
-            onChange={(event) => handleChange("return", event.target.value)}
+            value={userInput.expectedReturn}
+            onChange={(event) =>
+              handleChange("expectedReturn", event.target.value)
+            }
             required
           />
         </p>
